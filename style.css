@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #2cebc7; background: -moz-linear-gradient(45deg,  #2cebc7 0%,#8267d5 100%); background: -webkit-linear-gradient(45deg,  #2cebc7 0%,#8267d5 100%); background: linear-gradient(45deg,  #2cebc7 0%,#8267d5 100%);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1em;
+}
+h1 {
+text-align: center;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tabela{
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  font-size: 0.9em ;
+
+ 
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form input {
+  
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border-radius: 5px;
+  border: none;
+  background: blue;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background ease .5s;
+}
+
+form button:hover {
+  background: rgb(4, 4, 134);
+}
+
+.result-paragraph, .bad{
+  background: rgb(128, 236, 146);
+  padding: 10px 20px ;
+}
+
+.bad{
+  background-color: red;
+}
