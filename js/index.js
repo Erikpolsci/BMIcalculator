@@ -18,12 +18,16 @@ form.addEventListener('submit', function (event){
 		return;
 	}
 
+	
+
 	const bmi = getBmi(weight, height);
 	const bmiLevel = getBmiLevel(bmi);
 
 	const showmsg = `Your BMI is: ${bmi} (${bmiLevel})`;
+	const level1 = ['Underweight', 'Healthy weight','Overweight','Obese level 1','Obese level 2','Obese level 3'];
 
-	setResult(showmsg, true)
+
+	setResult(showmsg, true, level1)
 
 	
 
@@ -51,18 +55,30 @@ function creatP(){
 	return p;
 }
 
-function setResult(showmsg, isValid){
-		const result = document.querySelector('#result');
-		result.innerHTML = '';
+function setResult(showmsg, isValid, level1){
+	const result = document.querySelector('#result');
+	result.innerHTML = '';
 
-		const p = creatP();
+	const p = creatP();
 
-		if(isValid){
-			p.classList.add('result-paragraph')
-		}else {
-			p.classList.add('bad')
-		}
-		p.innerHTML = showmsg
-		result.appendChild(p);
+	if( showmsg.includes(level1[0])){
+		p.classList.add('result-paragraph')	
+	
+	}else if(showmsg.includes(level1[1])){
 
+		p.classList.add('result-paragraph')	
+
+	}else if(showmsg.includes(level1[2])){
+
+		p.classList.add('overweight')
 	}
+	
+	else {
+
+		p.classList.add('bad')
+	}
+
+	p.innerHTML = showmsg
+	result.appendChild(p);
+
+}
